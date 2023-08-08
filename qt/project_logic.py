@@ -58,12 +58,16 @@ class Logic(QMainWindow, Ui_Calculator):
 
             if self.operation_label.text() == '+':
                 self.answer_label.setText(add(first_num, second_num))
+                self.error_label.setText("")
             elif self.operation_label.text() == '-':
                 self.answer_label.setText(subtract(first_num, second_num))
+                self.error_label.setText("")
             elif self.operation_label.text() == 'x':
                 self.answer_label.setText(multiply(first_num, second_num))
+                self.error_label.setText("")
             elif self.operation_label.text() == '÷':
                 self.answer_label.setText(divide(first_num, second_num))
+                self.error_label.setText("")
             else:
                 self.error_label.setText("Select An Operation")
         except ValueError:
